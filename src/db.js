@@ -3,7 +3,7 @@ const fs = require("fs");
 
 fs.mkdirSync("data", { recursive: true });
 
-const db = new Database("data/helpdesk.db");
+const db = new Database("db/helpdesk.db");
 
 db.prepare(`
   CREATE TABLE IF NOT EXISTS user_topics (

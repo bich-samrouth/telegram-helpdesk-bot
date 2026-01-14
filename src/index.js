@@ -5,7 +5,7 @@ const { setupRouting } = require("./routing.service");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Telegram Helpdesk Bot is running ✅");
+  res.send("Helpdesk Bot is running...");
 });
 
 setupRouting();

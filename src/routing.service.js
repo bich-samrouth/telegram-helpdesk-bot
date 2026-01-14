@@ -13,18 +13,22 @@ bot.getMe().then((me) => {
   console.log("Bot started as:", me.username, me.id);
 });
 
+// Helpers to identify message types
 function isPrivateChat(msg) {
   return msg?.chat?.type === "private";
 }
 
+// Check if message is in the support group
 function isSupportGroup(msg) {
   return msg?.chat?.id === SUPPORT_GROUP_ID && msg?.chat?.type === "supergroup";
 }
 
+// Check if message has a topic (message_thread_id)
 function hasTopic(msg) {
   return typeof msg?.message_thread_id === "number";
 }
 
+// Check if message is from a bot
 function isFromBot(msg) {
   if (BOT_ID && msg?.from?.id === BOT_ID) return true;
   return Boolean(msg?.from?.is_bot);

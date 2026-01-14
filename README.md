@@ -55,6 +55,3 @@ npm run dev
 - If replies are not delivered, confirm the bot has permission to read and post in the support group.
 - Ensure the support group is a supergroup with Topics enabled.
 - Verify `SUPPORT_GROUP_ID` and `BOT_TOKEN` in `.env`.
-
-## License
-ISC
